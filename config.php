@@ -10,7 +10,7 @@ $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 // template
 $template = [
-	'subject' => 'Reciept for Lessons',
+	'subject' => 'Receipt for Lessons',
 	'whitelist' => ['name', 'email', 'starting_date', 'ending_date']
 ];
 // create errors array

@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Lessons Reciept Form</title>
+		<title>Lessons Receipt Form</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Lessons Reciept Form</h2>
+					<h2>Lessons Receipt Form</h2>
 					<hr />
 					<h3>Transaction Info</h3>
 					<?php if (!empty($errors)) : ?>
