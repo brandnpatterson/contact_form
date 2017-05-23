@@ -1,12 +1,10 @@
-
-<?php require_once './config.php' ?>
-
+<?php require_once './config.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Contact Form</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<title>Lessons Reciept Form</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
@@ -17,29 +15,24 @@
 					<?php if (!empty($errors)) : ?>
 					<div class="errors">
 						<p class="bg-danger">
-							<?php echo implode( '</p><p class="bg-danger">', $errors ); ?>
+							<?php echo implode('</p><p class="bg-danger">', $errors); ?>
 						</p>
 					</div>
-					<?php elseif ($sent) : ?>
+				<?php elseif (isset($sent)) : ?>
 					<div class="success">
-						<p class="bg-success">Thank you! Your e-mail has been sent!</p>
+						<p class="bg-success">Your reciept was sent successfully.</p>
 					</div>
 					<?php endif; ?>
 					<form role="form" method="post" action="index.php">
 						<div class="form-group">
-							<input type="text" class="form-control" name="name" placeholder="Name" value="<?php echo isset( $fields['name']) ? _e($fields['name']) : '' ?>">
+							<input type="text" class="form-control" name="name" placeholder="Name" value="">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo isset( $fields['email']) ? _e($fields['email']) : '' ?>">
+							<input type="email" class="form-control" name="email" placeholder="E-mail" value="">
 						</div>
 						<div class="form-group">
-							<textarea class="form-control" rows="4" placeholder="What's up?" name="message"><?php echo isset( $fields['message']) ? _e($fields['message']) : '' ?></textarea>
-						</div>
-						<div class="form-group">
-							<label for="human" class="control-label">
-								5 + 2 = ?
-							</label>
-							<input type="text" class="form-control" name="human" placeholder="Show us you're a human!">
+							<input type="date" class="form-control" name="starting_date"></input>
+							<input type="date" class="form-control" name="ending_date"></input>
 						</div>
 						<div class="form-group">
 							<input name="submit" type="submit" value="Send" class="btn btn-primary">
